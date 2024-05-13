@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: template_rails_development
+  database: kaiblog_development
 
 test:
   <<: *default
-  database: template_rails_test
+  database: kaiblog_test
 
 production:
   <<: *default
-  database: template_rails_production
+  database: kaiblog_production
