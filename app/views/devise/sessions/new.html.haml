@@ -1,5 +1,7 @@
-%h2 Log in
+= title t('.title')
 = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   = f.input :name
-  = f.input :password
-  = f.button :submit
+  = f.input :password, required: true
+  = f.button :submit, t('.title')
+
+  = link_to t('devise.registrations.new.title'), new_user_registration_path, class: 'd-block mt-2'
