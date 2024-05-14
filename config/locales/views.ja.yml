@@ -4,3 +4,10 @@ ja:
       default: "%Y/%m/%d %H:%M:%S"
   menus:
     profile: "ユーザ情報"
+  devise:
+    sessions:
+      new:
+        title: "ログイン"
+    registrations:
+      new:
+        title: "サインアップ"
