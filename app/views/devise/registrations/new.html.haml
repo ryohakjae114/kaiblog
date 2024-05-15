@@ -1,0 +1,8 @@
+= title t('.title')
+= simple_form_for(resource, url: registration_path(resource_name)) do |f|
+  = f.input :name
+  = f.input :password
+  = f.input :password_confirmation
+  = f.button :submit
+
+  = link_to t('devise.sessions.new.title'), new_user_session_path, class: 'd-block mt-2'
