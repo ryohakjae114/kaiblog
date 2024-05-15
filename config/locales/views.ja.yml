@@ -8,6 +8,8 @@ ja:
     sessions:
       new:
         title: "ログイン"
+      destroy:
+        title: "ログアウト"
     registrations:
       new:
         title: "サインアップ"
