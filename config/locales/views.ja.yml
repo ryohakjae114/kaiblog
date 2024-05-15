@@ -17,3 +17,6 @@ ja:
         title: "認証情報変更"
       destroy:
         title: "アカウント削除"
+  profiles:
+    edit:
+      title: "プロフィール情報編集"
