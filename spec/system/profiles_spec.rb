@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Profiles', type: :system do
-  let!(:hakjae) { create(:user) }
+  let!(:hakjae) { create(:user, introduction: '', external_blog_url: '') }
 
   context 'ログイン状態' do
     before do
