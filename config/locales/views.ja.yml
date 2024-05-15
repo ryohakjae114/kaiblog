@@ -13,3 +13,5 @@ ja:
         title: "サインアップ"
       edit:
         title: "認証情報変更"
+      destroy:
+        title: "アカウント削除"
