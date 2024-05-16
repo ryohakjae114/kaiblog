@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :rememberable, :validatable
 
+  has_many :posts, dependent: :destroy
+
   validates :name, presence: true, length: { maximum: 20 },
                    format: { with: /^[0-9a-zA-Z]+$/, message: I18n.t('activerecord.errors.user.name_format_error'), multiline: true }, uniqueness: true
   validates :introduction, length: { maximum: 200 }
