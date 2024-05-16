@@ -1,2 +1,8 @@
-%h1 Posts#index
-%p Find me in app/views/posts/index.html.haml
+= title t('.title')
+- @posts.includes(:user).find_each do |post|
+  .card.my-2
+    .card-body
+      .d-flex.justify-content-between
+        = link_to post.user.name, ''
+        = l(post.created_at)
+      %p.mb-0= post.body
