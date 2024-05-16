@@ -5,3 +5,8 @@ ja:
     attributes:
       user:
         name: "名前"
+        introduction: "自己紹介"
+        external_blog_url: "ブログURL"
+    errors:
+      user:
+        name_format_error: "は英数字のみ使うことができます"
