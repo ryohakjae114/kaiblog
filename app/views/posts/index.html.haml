@@ -1,5 +1,6 @@
 = title t('.title')
-= paginate @posts
+.mx-auto
+  = paginate @posts, theme: 'bootstrap-5'
 - @posts.includes(:user).find_each do |post|
   .card.my-2
     .card-body
@@ -7,4 +8,4 @@
         = link_to post.user.name, ''
         = l(post.created_at)
       %p.mb-0= post.body
-= paginate @posts
+= paginate @posts, theme: 'bootstrap-5'

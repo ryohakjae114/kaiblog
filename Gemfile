@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails'
 
 gem 'bootsnap', require: false
+gem 'bootstrap5-kaminari-views'
 gem 'cssbundling-rails'
 gem 'dekiru'
 gem 'devise'
