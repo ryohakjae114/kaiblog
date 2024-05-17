@@ -10,7 +10,7 @@ RSpec.describe 'Profiles', type: :system do
 
     it 'プロフィール情報を編集できること' do
       visit root_path
-      click_on user.name
+      click_on hakjae.name
       click_on 'プロフィール情報編集'
       fill_in '自己紹介', with: '私の名前はハッチェです。'
       fill_in 'ブログURL', with: 'https://example.com'

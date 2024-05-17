@@ -20,3 +20,6 @@ ja:
   profiles:
     edit:
       title: "プロフィール情報編集"
+  posts:
+    index:
+      title: "投稿一覧"
