@@ -1,7 +1,7 @@
 = title t('.title')
 .mx-auto
   = paginate @posts, theme: 'bootstrap-5'
-- @posts.includes(:user).find_each do |post|
+- @posts.includes(:user).find_each(order: :desc) do |post|
   .card.my-2
     .card-body
       .d-flex.justify-content-between
