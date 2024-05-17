@@ -1,5 +1,5 @@
 = title t('.title')
-= link_to t('.fixed_new_post_path_text'), new_post_path, class: 'btn btn-primary btn-lg float-end me-5'
+= link_to t('.new_post'), new_post_path, class: 'btn btn-primary btn-lg float-end me-5'
 = paginate @posts, theme: 'bootstrap-5'
 - @posts.includes(:user).find_each(order: :desc) do |post|
   .card.my-2
