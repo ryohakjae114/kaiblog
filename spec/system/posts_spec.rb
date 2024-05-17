@@ -12,4 +12,11 @@ RSpec.describe 'Posts', type: :system do
     click_link '2', class: 'page-link', match: :first
     expect(page).to have_content('今日の天気はいい天気')
   end
+
+  context 'ログイン時' do
+    before do
+      sign_in :user
+      visit root_path
+    end
+  end
 end
