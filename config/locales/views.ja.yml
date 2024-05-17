@@ -23,3 +23,6 @@ ja:
   posts:
     index:
       title: "投稿一覧"
+      new_post: "🖋️ 投稿"
+    new:
+      title: "新規投稿作成"
