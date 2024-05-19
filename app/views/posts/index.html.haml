@@ -8,4 +8,6 @@
         = link_to post.user.name, ''
         = l(post.created_at)
       %p.mb-0= post.body
+      - if post.user == current_user
+        = link_to '編集', edit_post_path(post), class: 'btn btn-outline-dark float-end'
 = paginate @posts, theme: 'bootstrap-5'
