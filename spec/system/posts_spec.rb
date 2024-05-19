@@ -35,5 +35,15 @@ RSpec.describe 'Posts', type: :system do
         expect(page).to have_content('今日の天気はいい天気だわ')
       end.to change(user.posts, :count).by(1)
     end
+
+    it '投稿を編集できること' do
+      create(:post, body: '昨日の天気はいい天気だわ', user:)
+      visit root_path
+      click_on '編集'
+      fill_in '本文', with: '今日の天気はいい天気だわ'
+      click_on '更新する'
+      expect(page).to have_content('更新しました')
+      expect(page).to have_content('今日の天気はいい天気だわ')
+    end
   end
 end
