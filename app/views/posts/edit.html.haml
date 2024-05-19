@@ -2,3 +2,5 @@
 = simple_form_for @post do |f|
   = f.input :body
   = f.button :submit
+
+= link_to t('posts.edit.destroy'), post_path, data: { turbo_method: :delete }, class: 'btn btn-danger float-end'

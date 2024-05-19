@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :set_post, only: %i[edit update]
+  before_action :set_post, only: %i[edit update destroy]
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page]).per(10)
@@ -29,6 +29,11 @@ class PostsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @post.destroy!
+    redirect_to root_url, notice: t('controller.destroyed'), status: :see_other
   end
 
   private
