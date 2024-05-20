@@ -31,3 +31,5 @@ ja:
       edit:
         title: "投稿編集"
         destroy: "削除"
+    show:
+      edit: "編集"

@@ -1,0 +1,10 @@
+= title @user.name
+%h2.mb-2= User.human_attribute_name(:introduction)
+.border.rounded-3.p-2
+  = @user.introduction
+%h2.mt-5.mb-2= User.human_attribute_name(:external_blog_url)
+.border.rounded-3.p-2
+  = link_to sanitize(@user.external_blog_url), @user.external_blog_url, target: :_blank
+
+- if @user == current_user
+  = link_to t('.edit'), edit_profile_path(@user), class: 'btn btn-outline-dark mt-5'
