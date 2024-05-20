@@ -24,8 +24,10 @@ ja:
     index:
       title: "投稿一覧"
       new_post: "🖋️ 投稿"
-    new:
-      title: "新規投稿作成"
-    edit:
-      title: "投稿編集"
-      destroy: "削除"
+  users:
+    posts:
+      new:
+        title: "新規投稿作成"
+      edit:
+        title: "投稿編集"
+        destroy: "削除"
