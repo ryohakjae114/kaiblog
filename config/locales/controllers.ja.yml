@@ -4,3 +4,6 @@ ja:
     updated: "更新しました"
     destroyed: "削除しました"
     published: "公開しました"
+  relationships:
+    create:
+      followed: "フォローしました"

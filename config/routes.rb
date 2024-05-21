@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   scope module: 'users' do
     resources :posts, only: %i[new create edit update destroy]
   end
+  resources :relationships, only: %i[create]
   get 'up' => 'rails/health#show', as: :rails_health_check
 end

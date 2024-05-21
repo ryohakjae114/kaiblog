@@ -14,6 +14,14 @@ class User < ApplicationRecord
   validates :introduction, length: { maximum: 200 }
   validates :external_blog_url, length: { maximum: 8000 }
 
+  def follow?(user)
+    active_relationships.exists?(followed_id: user.id)
+  end
+
+  def follow!(user_id)
+    Relationship.create!(following_id: id, followed_id: user_id)
+  end
+
   # No use email
   def email_required?
     false
