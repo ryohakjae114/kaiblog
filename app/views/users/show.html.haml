@@ -9,5 +9,6 @@
 - if @user == current_user
   = link_to t('.edit'), edit_profile_path(@user), class: 'btn btn-outline-dark mt-5'
 - elsif current_user.follow?(@user)
+  = link_to t('.unfollow'), relationship_path(user_id: @user.id), data: { turbo_method: :delete }, class: 'btn btn-outline-dark mt-5'
 - else
   = link_to t('.follow'), relationships_path(user_id: @user.id), data: { turbo_method: :post }, class: 'btn btn-outline-dark mt-5'
