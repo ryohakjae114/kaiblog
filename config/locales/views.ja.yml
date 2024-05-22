@@ -38,7 +38,6 @@ ja:
     profiles:
       edit:
         title: "プロフィール情報編集"
-  followings:
-    posts:
+    following_posts:
       index:
         title: "フォロー中のユーザの投稿一覧"

@@ -7,9 +7,7 @@ Rails.application.routes.draw do
     resource :profile, only: %i[edit update]
     resources :posts, only: %i[new create edit update destroy]
     resources :relationships, only: %i[create destroy]
-  end
-  namespace :followings do
-    resources :posts, only: %(index)
+    resources :following_posts, only: :index
   end
   get 'up' => 'rails/health#show', as: :rails_health_check
 end
