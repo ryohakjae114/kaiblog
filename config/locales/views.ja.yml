@@ -4,6 +4,9 @@ ja:
       default: "%Y/%m/%d %H:%M:%S"
   menus:
     profile: "ユーザ情報"
+  layouts:
+    posts:
+      new_post: "🖋️ 投稿"
   devise:
     sessions:
       new:
@@ -17,13 +20,9 @@ ja:
         title: "認証情報変更"
       destroy:
         title: "アカウント削除"
-  profiles:
-    edit:
-      title: "プロフィール情報編集"
   posts:
     index:
       title: "投稿一覧"
-      new_post: "🖋️ 投稿"
   users:
     posts:
       new:
@@ -31,5 +30,14 @@ ja:
       edit:
         title: "投稿編集"
         destroy: "削除"
-    show:
-      edit: "編集"
+    users:
+      show:
+        edit: "編集"
+        follow: "フォロー"
+        unfollow: "フォロー解除"
+    profiles:
+      edit:
+        title: "プロフィール情報編集"
+    following_posts:
+      index:
+        title: "フォロー中のユーザの投稿一覧"
