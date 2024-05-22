@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :system do
+RSpec.describe 'Users::Users', type: :system do
   let!(:hakjae) { create(:user, name: 'hakjae', introduction: '僕の名前はリョハッチェでやんす', external_blog_url: 'https://@example.com') }
 
   it 'ユーザのプロフィール情報を閲覧できること' do
