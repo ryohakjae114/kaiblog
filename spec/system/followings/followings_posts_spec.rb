@@ -11,7 +11,7 @@ RSpec.describe 'Followings::Posts', type: :system do
       create(:post, user: micchan)
 
       sign_in hakjae
-      hakjae.follow!(tajitaku.id)
+      hakjae.follow!(tajitaku)
     end
 
     it 'フォロー中のユーザの投稿一覧機能' do

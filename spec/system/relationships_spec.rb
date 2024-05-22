@@ -19,7 +19,7 @@ RSpec.describe 'Relationships', type: :system do
     end
 
     it 'フォロー解除できること' do
-      create(:relationship, following_id: hakjae.id, followed_id: tajitaku.id)
+      hakjae.follow!(tajitaku)
       visit user_path(tajitaku)
       expect do
         click_on 'フォロー解除'

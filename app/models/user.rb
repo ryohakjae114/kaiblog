@@ -18,12 +18,12 @@ class User < ApplicationRecord
     active_relationships.exists?(followed_id: user.id)
   end
 
-  def follow!(user_id)
-    active_relationships.create!(followed_id: user_id)
+  def follow!(user)
+    active_relationships.create!(followed_id: user.id)
   end
 
-  def unfollow!(user_id)
-    active_relationships.find_by(followed_id: user_id).destroy!
+  def unfollow!(user)
+    active_relationships.find_by(followed_id: user.id).destroy!
   end
 
   # No use email

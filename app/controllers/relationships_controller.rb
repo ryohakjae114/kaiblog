@@ -1,11 +1,19 @@
 class RelationshipsController < ApplicationController
+  before_action :set_user
+
   def create
-    current_user.follow!(params[:user_id])
-    redirect_to user_path(params[:user_id]), notice: t('.followed')
+    current_user.follow!(@user)
+    redirect_to user_path(@user), notice: t('.followed')
   end
 
   def destroy
-    current_user.unfollow!(current_user.active_relationships.find_by!(followed_id: params[:user_id]).followed_id)
-    redirect_to user_path(params[:user_id]), notice: t('.unfollowed'), status: :see_other
+    current_user.unfollow!(@user)
+    redirect_to user_path(@user), notice: t('.unfollowed'), status: :see_other
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 end
