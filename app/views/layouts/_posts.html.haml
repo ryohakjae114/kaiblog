@@ -1,0 +1,12 @@
+= link_to t('.new_post'), new_post_path, class: 'btn btn-primary btn-lg float-end me-5'
+= paginate posts, theme: 'bootstrap-5'
+- posts.includes(:user).find_each(order: :desc) do |post|
+  .card.my-2
+    .card-body
+      .d-flex.justify-content-between
+        = link_to post.user.name, user_path(post.user)
+        = l(post.created_at)
+      %p.mb-0= post.body
+      - if post.user == current_user
+        = link_to '編集', edit_post_path(post), class: 'btn btn-outline-dark float-end'
+= paginate posts, theme: 'bootstrap-5'

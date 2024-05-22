@@ -8,7 +8,9 @@
       %ul.navbar-nav.w-100.ms-5.d-flex
         %li.nav-item.d-inline-block
           = link_to t('posts.index.title'), root_path, class: 'nav-link'
-        %li.nav-item.d-inline-block
+        %li.nav-item.d-inline-block.ms-5
+          = link_to t('followings.posts.index.title'), followings_posts_path, class: 'nav-link'
+        %li.nav-item.d-inline-block.ms-5
           = link_to t('users.posts.new.title'), new_post_path, class: 'nav-link'
         %li.flex-grow-1
         - if user_signed_in?
