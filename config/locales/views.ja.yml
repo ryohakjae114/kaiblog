@@ -20,9 +20,6 @@ ja:
         title: "認証情報変更"
       destroy:
         title: "アカウント削除"
-  profiles:
-    edit:
-      title: "プロフィール情報編集"
   posts:
     index:
       title: "投稿一覧"
@@ -33,10 +30,14 @@ ja:
       edit:
         title: "投稿編集"
         destroy: "削除"
-    show:
-      edit: "編集"
-      follow: "フォロー"
-      unfollow: "フォロー解除"
+    users:
+      show:
+        edit: "編集"
+        follow: "フォロー"
+        unfollow: "フォロー解除"
+    profiles:
+      edit:
+        title: "プロフィール情報編集"
   followings:
     posts:
       index:

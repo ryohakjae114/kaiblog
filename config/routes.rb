@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   root 'posts#index'
   devise_for :users
-  resource :profile, only: %i[edit update]
-  resources :users, only: %i[show]
+
   scope module: 'users' do
+    resources :users, only: %i[show]
+    resource :profile, only: %i[edit update]
     resources :posts, only: %i[new create edit update destroy]
+    resources :relationships, only: %i[create destroy]
   end
   namespace :followings do
     resources :posts, only: %(index)
   end
-  resources :relationships, only: %i[create destroy]
   get 'up' => 'rails/health#show', as: :rails_health_check
 end

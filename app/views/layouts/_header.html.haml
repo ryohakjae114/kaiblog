@@ -18,7 +18,7 @@
             = link_to current_user.name, '#', class: 'nav-link dropdown-toggle', 'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', role: 'button'
             %ul.dropdown-menu.dropdown-menu-sm-end
               %li= link_to t('devise.registrations.edit.title'), edit_user_registration_path, class: 'dropdown-item'
-              %li= link_to t('profiles.edit.title'), edit_profile_path, class: 'dropdown-item'
+              %li= link_to t('users.profiles.edit.title'), edit_profile_path, class: 'dropdown-item'
               %li= link_to t('devise.sessions.destroy.title'), destroy_user_session_path, class: 'dropdown-item', data: { turbo_method: :delete }
         - else
           %li.nav-item
